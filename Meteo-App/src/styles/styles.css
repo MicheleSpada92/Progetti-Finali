@@ -1,0 +1,128 @@
+/* styles.css (può essere il tuo file principale) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+One:wght@400;700&display=swap');
+
+/* home */
+
+/* Stili comuni per Home */
+.home-container {
+    height: 70vh; /* Riduci l'altezza a x% della viewport height */
+    width: 20%; /* Usa l'x% della larghezza disponibile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh auto; /* Centra il contenitore nella pagina verticalmente e usa margin auto per centrarlo orizzontalmente */
+    border: 3px solid black; /* Aggiungi un bordo nero al container */
+    border-radius: 20px; /* Rendi i margini rotondi */
+    padding: 20px; /* Aggiungi spazio interno dai margini */
+    background: url('../components/assets/weather-app.jpg') center/cover; /* Aggiungi l'immagine di sfondo */
+  }
+  
+  /* Stili specifici per il titolo "Weather App" */
+  .app-name {
+    font-family: 'Rubik One', sans-serif;
+    font-size: 2rem;
+    font-weight: 100; /* Aggiungi il peso del carattere desiderato */
+    display: inline-block; /* Permette l'applicazione di stili a ogni lettera */
+    background: linear-gradient(to right, #610c83, #f5f3f7); /* Crea un gradiente nero da sinistra a destra */
+    background-clip: text; /* Applica lo sfondo solo al testo visibile */
+    -webkit-background-clip: text; /* Supporto per browser WebKit (Chrome, Safari) */
+    color: transparent; /* Rendi il testo trasparente in modo che il colore di sfondo sia visibile */
+    margin-bottom: 110px; /* Riduci lo spazio tra il titolo e il form */
+}
+  
+  /* Stili specifici per il form */
+  .form-container {
+    text-align: center;
+    height: 90%;
+    width: 100%; /* Usa il 70% della larghezza disponibile */
+    margin: auto; /* Centra il contenitore nella pagina */
+  }
+  
+  /* Stili specifici per la barra di ricerca */
+  input[type="text"] {
+    width: 50%; 
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Aggiungi spazio sotto la barra di ricerca */
+  }
+  
+  /* Stili specifici per il pulsante */
+  button, .btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Riduci le dimensioni del pulsante */
+    background-color: #eb982b; /* Cambia il colore del pulsante */
+    color: #fff; /* Cambia il colore del testo del pulsante  */
+    margin-top: 10px; /* Riduci lo spazio tra il form e il pulsante */
+    transition: background-color 0.3s, color 0.3s; /* Aggiungi transizione per effetto smooth */
+}
+
+button:hover, .btn:hover {
+    background-color: #ffbf60; /* Cambia il colore del pulsante al passaggio del cursore */
+    color: #333; /* Cambia il colore del testo del pulsante al passaggio del cursore */
+}
+
+/* Stili per WeatherBackground */
+
+.weather-background-container {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 8px;
+    height: 80vh;
+    overflow: hidden; /* Impedisce che l'overflow dell'immagine crei uno scroll bar */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('../components/assets/sunny-background.jpg'); /* Aggiungi l'immagine di sfondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px; /* Aggiungi margine inferiore */
+    color: white; /* Cambia il colore del testo a bianco */
+}
+
+/* Stili specifici per il pulsante di ritorno a Home */
+
+.weather-back-to-home {
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #eb982b;
+    margin-top: -50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Effetti di hover per il pulsante di ritorno a Home nella pagina di ricerca */
+.weather-back-to-home:hover {
+    background-color: #ffbf60; /* Cambia il colore del pulsante al passaggio del cursore */
+    color: #dbdbdb;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Colore nero con opacità del x% */
+}
+
+.weather-overlay {
+  position: relative; /* Posizione relativa per sovrapporre il testo sopra l'overlay scuro */
+  z-index: 2; /* Assicura che il testo sia sopra lo sfondo scuro */
+  color: white !important; /* Imposta il colore del testo a bianco, utilizzando !important per assicurare la priorità */
+  /* Altri stili... */
+}
