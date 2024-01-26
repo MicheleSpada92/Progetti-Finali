@@ -5,6 +5,7 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Star, StarFill } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
+import "../App.css";
 
 const Job = ({ data }) => {
   const favorites = useSelector((state) => state.favorites);
@@ -14,8 +15,8 @@ const Job = ({ data }) => {
 
   return (
     <Row
-      className="mx-0 mt-3 p-3"
-      style={{ border: "1px solid #00000033", borderRadius: 4 }}
+      className="mx-0 mt-3 p-3 job-card"
+      style={{ border: "1px solid #00000033", borderRadius: 4, backgroundColor: "#f8f9fa" }}
     >
       <Col xs="auto" className="d-flex align-items-center">
         {isFav ? (
